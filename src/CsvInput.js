@@ -12,7 +12,7 @@ function CsvInput({ handleFileChange }) {
   return (
     <form className="csv-form">
       <div className="csv-form-group">
-        <label htmlFor="file">CSV File</label>
+        {/* <label htmlFor="file">CSV File</label> */}
         <input
           type="file"
           className="csv-form-control"
