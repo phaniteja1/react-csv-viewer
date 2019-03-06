@@ -10,7 +10,7 @@
 
 Super easy csv uploader and viewer component for ReactJS
 
-![Alt Text](https://media.giphy.com/media/3o6UAYi7H2sZf94cgw/giphy.gif)
+![Alt Text](demo.gif)
 
 ## Install
 
