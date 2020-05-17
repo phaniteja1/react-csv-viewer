@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "papaparse": "4.6.3",
+    "react-spinners": "^0.8.3",
     "react-table": "6.9.2"
   }
 }
