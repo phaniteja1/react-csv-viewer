@@ -4,13 +4,22 @@ import "react-table/react-table.css";
 import ReactTable from "react-table";
 import CsvInput from "./CsvInput";
 
+//importing the spinner component
+import ClipLoader from "react-spinners/ClipLoader";
+
 function Interface() {
   const [data, setData] = useState([]);
   const [columns, setColumns] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  //to control the spinner loading
+  const [load, setLoad] = useState(false);
   useEffect(() => {
-    if (data.length && columns.length) setLoading(false);
+    if (data.length && columns.length) {
+      setLoading(false);
+      //hide the spinner
+      setLoad(false);
+    }
   }, [data, columns]);
 
   const handleFileChange = file => {
@@ -19,6 +28,8 @@ function Interface() {
       dynamicTyping: true,
       complete: handleDataChange
     });
+    //show the spinner
+    setLoad(true);
   };
 
   const makeColumns = rawColumns => {
@@ -35,6 +46,7 @@ function Interface() {
   return (
     <div>
       <CsvInput handleFileChange={handleFileChange} data={data} />
+      {load && <ClipLoader size={50} color={"#123abc"} loading={load} />}
       {!loading && (
         <ReactTable
           data={data}
