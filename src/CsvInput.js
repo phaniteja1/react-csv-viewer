@@ -24,6 +24,7 @@ function CsvInput({ handleFileChange }) {
       </div>
     </form>
   );
+  
 }
 
 export default CsvInput;
