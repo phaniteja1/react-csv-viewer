@@ -1,53 +1,44 @@
 {
-  "name": "react-csv-viewer",
-  "version": "1.0.4",
-  "description": "React component for uploading and viewing your csv file",
+  "name": "csv-viewer-react",
+  "version": "1.0.0",
+  "description": "A CSV viewer component for React with row selection and search filter features.",
   "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run transpile"
-  },
+  "module": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phaniteja1/react-csv-viewer.git"
+    "url": "https://github.com/frozenmafia/react-csv-viewer"
   },
   "keywords": [
-    "\"react\"",
-    "\"reactjs\"",
-    "\"hooks\"",
-    "\"csv\"",
-    "\"csvviewer\"",
-    "\"upload\""
+    "csv",
+    "viewer",
+    "react",
+    "component",
+    "table",
+    "row",
+    "selection",
+    "filter"
   ],
-  "author": "phaniteja1",
-  "license": "ISC",
-  "peerDependencies": {
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2"
-  },
-  "bugs": {
-    "url": "https://github.com/phaniteja1/react-csv-viewer/issues"
-  },
-  "homepage": "https://github.com/phaniteja1/react-csv-viewer#readme",
-  "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.0",
-    "html-webpack-plugin": "^3.2.0",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.1.14"
-  },
+  "author": "frozenmafia",
+  "license": "MIT",
   "dependencies": {
-    "papaparse": "4.6.3",
-    "react-table": "6.9.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "papaparse": "^5.3.0",
+    "react-table": "^7.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
